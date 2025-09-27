@@ -1,7 +1,7 @@
-from operator import index
+
 import matplotlib.pyplot as plt
 import pandas as pd
-from sympy.physics.units import temperature
+
 
 ''' 
 Weather Data Analysis
@@ -37,4 +37,23 @@ plt.bar(monthly_avg.index,monthly_avg.values)
 plt.title("Average Temperature per month")
 plt.xlabel("Month")
 plt.ylabel("Avg. Temperature (.C)")
+plt.show()
+
+
+#Precipitation distribution / Frequency
+plt.hist(data['precipitation'],bins =10,edgecolor = 'black')
+plt.title("Precipitation Distribution")
+plt.xlabel("Precipitation")
+plt.ylabel("Frequency")
+plt.show()
+
+
+# Temperature vs Windspeed Scatter Plot
+temperature = data['temp_max'].head(15)
+wind = data['wind'].head(15)
+plt.scatter(temperature,wind,color='blue')
+plt.title("Temperature vs Windspeed")
+plt.xlabel("Temperature")
+plt.ylabel("Wind Speed")
+plt.grid()
 plt.show()
