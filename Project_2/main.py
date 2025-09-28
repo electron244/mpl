@@ -29,3 +29,22 @@ plt.xlabel("IMDb Rating")
 plt.ylabel("Movies Name")
 plt.title("Top 10 Highest Rated Movies")
 plt.show()
+
+# 4. Ratings Over Years
+avg_rating_year = df.groupby('year')['rating'].mean()
+plt.plot(avg_rating_year.index,avg_rating_year.values,color='skyblue')
+plt.xlabel("Years")
+plt.ylabel("Average Rating")
+plt.grid()
+plt.title("Rating Over Years")
+plt.show()
+
+
+
+
+
+
+
+
+
+
