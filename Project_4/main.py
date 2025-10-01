@@ -19,4 +19,12 @@ plt.show()
 
 
 # Compare India vs USA
+usa = df[df['country'] == "USA"]
+plt.plot(india['date'],india['confirmed'],color='skyblue',marker='o')
+plt.plot(usa['date'],usa['confirmed'],color='red',marker='o')
+plt.xlabel("Date")
+plt.ylabel("Confirmed Cases")
+plt.title("Covid Cases: India vs USA")
+plt.grid()
+plt.show()
 
